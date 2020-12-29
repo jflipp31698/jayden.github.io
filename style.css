@@ -26,20 +26,39 @@ body::-webkit-scrollbar-track {
 }
 
 .page {
-    background-color: var(--google-blue);
     display: flex;
     flex-direction: column;
 }
 
 .screen1 {
     height: 100vh;
+    background-color: var(--google-blue);
+    padding: 10%;
+    color: white;
 }
 
 .hello {
     font-size: 10rem;
 }
 
+.name {
+    margin-left: 2.5%;
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.info {
+    font-size: 2rem;
+}
+
 .screen2 {
-    background-color: var(--google-red);
+    background-color: white;
+    height: 100vh;
+}
+
+.screen3 {
+    background-color: var(--google-green);
     height: 100vh;
 }
