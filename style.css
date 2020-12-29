@@ -1,14 +1,14 @@
 :root {
     font-size: 16px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    --text-primary: #b6b6b6;
-    --text-sceondary: #ececec;
-    --bg-primary: #363636;
-    --bg-secondary: #4592bf;
+    font-family: Poppins, 'Georgia','Times New Roman', Times, serif;
+    --text-primary: black;
+    --text-secondary: #e1eb34;
+    --bg-primary: white;
+    --bg-secondary: #4C8BF5;
 }
 
 body {
-    color: white;
+    color: black;
     background-color: var(--bg-primary);
     margin: 0;
     padding: 0;
@@ -21,17 +21,27 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
     background-color: #cf3131;
+    color: white;
 }
 
 .navbar {
     width: 10%;
-    height: 50vh;
+    height: 20vh;
     position: fixed;
     top: 50%;
     left: 0%;
     transform: translate(0%, -50%);
     background-color: var(--bg-secondary);
     border-radius: 0px 25px 25px 0px;
+    transition-property: height, position;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.navbar:hover {
+    height: 50vh;
+    position: fixed;
+    left: 0%;
 }
 
 .navbar-nav {
@@ -52,17 +62,21 @@ body::-webkit-scrollbar-track {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--bg-primary);
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: bold;
 }
 
 .nav-link:hover {
-    color: #cf3131;
+    color: var(--text-secondary);
 }
 
 main {
     margin-left: 10%;
     padding: 1rem;
     padding-bottom: 1000px;
+}
+
+.name {
+    font-size: 3rem;
 }
