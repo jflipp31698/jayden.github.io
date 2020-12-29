@@ -24,7 +24,7 @@ body::-webkit-scrollbar-track {
 }
 
 .navbar {
-    width: 7rem;
+    width: 10%;
     height: 50vh;
     position: fixed;
     top: 50%;
@@ -62,7 +62,7 @@ body::-webkit-scrollbar-track {
 }
 
 main {
-    margin-left: 7rem;
+    margin-left: 10%;
     padding: 1rem;
     padding-bottom: 1000px;
 }
