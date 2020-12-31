@@ -18,12 +18,9 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 0rem;
 }
 
-body::-webkit-scrollbar-track {
-    background-color: white;
-}
 
 .container-fluid {
     display: flex;
