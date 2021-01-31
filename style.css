@@ -17,6 +17,7 @@ html, body {
     text-align: center;
     overflow-x: hidden;
     background-color: #dddddd;
+    font-size: 1rem;
 }
 
 .container-fluid {
@@ -24,7 +25,7 @@ html, body {
     flex-direction: column;
 }
 
-.screen1 {
+#screen1 {
     height: 100vh;
     background-color: var(--google-blue);
     color: white;
@@ -40,7 +41,7 @@ html, body {
 .nav a {
     color: white;
     text-decoration: none;
-    padding: 1rem;
+    padding: 5%;
 }
 
 .nav a:hover {
@@ -57,7 +58,7 @@ html, body {
 .profile-pic {
     width: 80%;
     height: auto;
-    margin: 50px 0px;
+    margin: 5% 0%;
 }
 
 .hello {
@@ -66,7 +67,7 @@ html, body {
 
 .info {
     font-size: 1rem;
-    margin: 0px 30px;
+    margin: 2.5% 5%;
 }
 
 #screen2 {
@@ -80,7 +81,7 @@ html, body {
     color: white;
     font-size: 1.5rem;
     padding: 20px;
-    margin: 0px 0px 30px 0px;
+    margin: 0% 0% 5% 0%;
 }
 
 .content {
@@ -88,9 +89,9 @@ html, body {
     text-align: center;
 }
 
-.edu-info {
-    font-size: .75rem;
-    margin: 50px 30px;
+.info {
+    font-size: 1rem;
+    margin: 10% 7.5%;
 }
 
 .code {
@@ -99,10 +100,6 @@ html, body {
     border-radius: 10px;
 }
 
-.school-projects {
-    font-size: .75rem;
-    margin: 50px 30px;
-}
 
 .world {
     width: 100%;
@@ -131,28 +128,28 @@ html, body {
     background-color: var(--google-green);
     color: white;
     font-size: 1.5rem;
-    padding: 20px;
-    margin: 0px 0px 30px 0px;
+    padding: 5%;
+    margin: 0 0 10% 0;
 }
 
 .swiper-container {
-    margin: 200px 0px;
-    width: 300px;
+    margin: 20% 0px;
+    width: 80vw;
     height: 380px;
   }
 
-  .swiper-slide {
+.swiper-slide {
     background-position: center;
     background-size: cover;
-  }
+}
 
-  .swiper-container .swiper-slide .imgBx {
-      position: absolute;
-      width: 300px;
-      height: 300px;
-  }
+.swiper-container .swiper-slide .imgBx {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
 
-  .swiper-container .swiper-slide .imgBx img{
+.swiper-container .swiper-slide .imgBx img{
     position: absolute;
     top: 0;
     left: 0;
@@ -193,18 +190,18 @@ html, body {
     background-color: var(--google-blue);
     color: white;
     font-size: 1.5rem;
-    padding: 20px;
-    margin: 0px 0px 30px 0px;
+    padding: 5%;
+    margin: 0px 0px 7.5% 0px;
 }
 
 #title-Tag-Line {
     font-size: 20px;
   }
-  .wrapper {
-      margin: 125px 0px;
-  }
-  /* form animation starts */
-  .form {
+.wrapper {
+    margin: 25% 0;
+}
+/* form animation starts */
+.form {
     background-color: #ccc;
     border-radius: 5px;
     max-width: 480px;
@@ -216,51 +213,49 @@ html, body {
     right: 0;
     position: absolute;
     animation: bounce 2.5s infinite;
-  }
+}
   ::-webkit-input-placeholder {
     font-size: 1.3em;
   }
-  
-  
-  .pageTitle{
+
+.pageTitle{
     font-size: 1.25em;
     font-weight: bold;
-  }
+}
   
-  .name {
+.name {
     background-color: #ebebeb;
-    color: white;
-  }
-  .name:hover {
+}
+.name:hover {
     height: 30px;
     width: 300px;
     transition: ease 0.5s;
-  }
+}
   
-  .email {
+.email {
     background-color: #ebebeb;
     height: 2em;
-  }
+}
   
-  .email:hover {
+.email:hover {
     height: 30px;
     width: 300px;
     transition: ease 0.5s;
-  }
+}
   
-  .message {
+.message {
     background-color: #ebebeb;
     overflow: hidden;
     height: 10rem;
-  }
+}
   
-  .message:hover {
+.message:hover {
     height: 12em;
     width: 300px;
     transition: ease 0.5s;
-  }
+}
   
-  .formEntry {
+.formEntry {
     display: block;
     margin: 30px auto;
     min-width: 250px;
@@ -268,23 +263,38 @@ html, body {
     border-radius: 2px;
     border: none;
     transition: all 0.5s ease 0s;
-  }
+}
   
-  .submit {
+.submit {
     width: 100px;
     color: white;
     background-color: var(--google-blue);
     font-size: 20px;
-  }
+}
   
-  .submit:hover {
+.submit:hover {
     box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
     transform: translateY(-3px);
     width: 200px;
     border-radius: 0%;
-  }
+}
+
+.backToTop {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: .75rem;
+    text-decoration: none;
+    margin: 0px 0px 7.5% 0px;
+    margin-top: 80vh;
+}
+
+.backToTop:hover {
+    color: #176bef;
+}
+
   
-  @keyframes bounce {
+@keyframes bounce {
     0% {
         tranform: translate(0, 5px);
     }
@@ -294,7 +304,7 @@ html, body {
     50% {
         transform: translate(0, 20px);
     }
-  } 
+} 
 
 
 

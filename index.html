@@ -14,7 +14,7 @@
         <!--the page-->
         <div class=".container-fluid">
             <!--Start of screen number 1-->
-            <div class="screen1">
+            <div id="screen1">
                 <div class="nav">
                     <a href="#screen2">About</a>
                     <a href="#screen3">Projects</a>
@@ -30,17 +30,19 @@
             <div id="screen2">
                 <h3 class="title">About Me</h3>
                 <div class="content">
-                    <p class="edu-info">For the past 5 years, I have been in Eau Claire, Wisconsin furthering my education. Pursuing a Bachelor's degree in Computer Science at University of Wisconsin since 2016, I have learned a variety of programming lanuages and skills.</p>
+                    <p class="info">Currently, I am pursuing a degree in Computer Science at the University of Wisconsin-Eau Claire with an expected graduation in May 2021. I chose to study Computer Science because of my love for technology and video games from a young age. During my time at UWEC, I have learned so much more than I thought I would. I advanced my knowledge of computer programming from almost no knowledge to a skilled developer in a short 4 years, learned quite a bit about computer hardware and even made some friends on the journey.
+                    </p>
                     <img class="code" src="images/programming.jpg" alt="Picture of a computer with code on the screen">
-                    <p class="school-projects">I have used Java to create a connection to a MySQL database and migrate the data into a Java GUI, utilized C threads to split the workload of finding prime numbers between given values and created responsive websites in HTML/CSS and JavaScript.</p>
+                    <p class="info">A large proportion of the world uses the Internet everyday, this is why web development is my favorite subject within Computer Science. I love creating webpages that make others lives easier, less stressful and more efficient. I even make silly websites with fun animations for fun when I have an hour or more of free time.</p>
+                    <p class="info">Beyond programming, I really enjoy nature and playing basketball with my friends, going out for dinner and playing video games. While I dont get much free time with school and work, I make time for these things to create a good balance in my life.</p>
                     <img class="world" src="images/world-0-1.jpg" alt="0-1 World">
                     <p class="quote">"The world is just zeros and one's"</p>
                 </div>
             </div>
             <!--Start of project screen, screen number 3-->
             <div id="screen3">
-                <h3 class="title2">Projects</h3>
-                <p>Below are some of the projects I have developed when I have free time from school and work</p>
+                <h3 class="title2">Personal Projects</h3>
+                <p class="info">Below are some of the projects I have developed when I have free time from school and work</p>
                 <!-- Swiper -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -90,9 +92,10 @@
                       <input type="text" class="name formEntry" placeholder="Name" />
                       <input type="text" class="email formEntry" placeholder="Email"/>
                       <textarea class="message formEntry" placeholder="Message"></textarea>
-                      <button class="submit formEntry" onclick="submitForm()">Submit</button>
+                      <button class="submit formEntry onclick="submitForm()">Submit</button>
                     </form>
                   </div>
+                    <a class="backToTop" href="#screen1">Back To Top</a>
             </div>
         </div>
     </main>
