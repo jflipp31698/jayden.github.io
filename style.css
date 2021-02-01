@@ -9,20 +9,15 @@
     --google-green: #1aa260;
     --google-blue: #176bef;
 }
-
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 html, body {
     color: black;
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow-x: hidden;
     background-color: #dddddd;
-    font-size: 1rem;
-}
-
-.container-fluid {
-    display: flex;
-    flex-direction: column;
 }
 
 #screen1 {
@@ -44,23 +39,240 @@ html, body {
 }
 
 .nav a:hover {
-    color: #363636;
-}
-
-.profile-pic {
-    width: 80%;
-    height: auto;
-    margin: 15% 0%;
+    color: #e1eb34;
 }
 
 .hello {
-    margin: 7.5% 0%;
+    margin: 0% 0% 7.5% 0%;
     font-size: 7.5rem;
+}
+
+.head-container {
+    z-index: 2;
+    margin: 15vw auto;
+    width: 70vw;
+    height: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head {
+    width: 60vw;
+    height: 75vw;
+    background-color: hsl(36, 81%, 72%);
+    border-radius: 70% 70% 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5vw solid  hsl(19, 46%, 68%);
+}
+
+.eyes, .brows {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 36vw;
+}
+
+.brows {
+    animation: brow-movement 2s infinite;
+}
+
+.eye {
+    background-color: white;
+    width: 12vw;
+    height: 7.5vw;
+    border-radius: 100%;
+    border-top: 1vw solid hsl(19, 46%, 68%);
+    border-bottom: 1vw solid hsl(19, 46%, 68%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes brow-movement {
+    0% {
+        margin-bottom: 0vw;
+    }
+    50% {
+        margin-bottom: 1vw;
+    }
+    100% {
+        margin-bottom: 0vw;
+    }
+}
+
+@keyframes eye-movement {
+    0% {
+        margin: 0 0 1vw 2vw;
+    }
+    50% {
+        margin: 0 0 .5vw 1vw;
+    }
+    100% {
+        margin: 0 0 1vw 2vw;
+    }
+}
+
+@keyframes pupil-movement {
+    0% {
+        margin: 0 0 2.5vw 3vw;
+    }
+    50% {
+        margin: 0 0 1.25vw 1.5vw;
+    }
+    100% {
+        margin: 0 0 2.5vw 3vw;
+    }
+}
+
+.eye::before {
+    content: '';
+    position: absolute;
+    width: 7.5vw;
+    height: 7.5vw;
+    background-color: #85ABCE;
+    border-radius: 100%;
+    animation: eye-movement 2s infinite;
+}
+
+.eye::after {
+    content: '';
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    background-color: black;
+    border-radius: 100%;
+    animation: pupil-movement 2s infinite;
+}
+
+.nose {
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    border: 0.75vw solid hsl(19, 46%, 68%);
+    border-radius: 0% 0% 100% 100%;
+    border-top: none;
+    margin-top: 20vw;
+}
+
+.brow {
+    width: 12vw;
+    height: 6vw;
+    border-top: 1.5vw solid hsl(27, 33%, 28%);
+    border-radius: 100%;
+    margin-bottom: 7.5vw;
+}
+
+.mouth {
+    position: absolute;
+    width: 20vw;
+    height: 5vw;
+    background-color: white;
+    border-radius: 30% 30% 80% 100%;
+    margin-top: 45vw;
+    border-bottom: 1vw solid hsl(19, 46%, 58%);
+    border-top: .75vw solid hsl(19, 46%, 58%);
+    animation: mouth-movement 2s infinite;
+}
+
+@keyframes mouth-movement {
+    0% {
+        border-radius: 0% 0% 100% 100%;
+        height: 5vw;
+    }
+    50% {
+        border-radius: 30% 30% 100% 100%;
+        height: 6vw;
+    }
+    100% {
+        border-radius: 0% 0% 100% 100%;
+        height: 5vw;
+    }
+}
+
+.ears {
+    z-index: 1;
+    position: absolute;
+    width: 67.5vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.ear {
+    width: 5vw;
+    height: 15vw;
+    background: hsl(36, 81%, 72%);
+    border-radius: 0 100% 100% 0;
+}
+
+.ear:first-child {
+    border-radius: 100% 0 0 100%;
+    border-left: .5vw solid  hsl(19, 46%, 68%);
+}
+
+.ear:last-child {
+    border-right: .5vw solid  hsl(19, 46%, 68%);
+}
+
+.hair {
+    z-index: 5;
+    position: absolute;
+    width: 60vw;
+    height: 25vw;
+    background-color: hsl(27, 33%, 28%);
+    margin-bottom: 60vw;
+    border-radius: 80% 20% 0 0;
+}
+
+.hair::before,
+.hair::after {
+  content: '';
+  position: absolute;
+  background-color: hsl(27, 33%, 28%);
+  height: 22.5vw;
+  width: 2vw;
+  border-radius: 0 0 25% 25%;
+  transform: translateY(100%);
+}
+
+.hair::before {
+    left: 0;
+  }
+
+.hair::after {
+  right: 0;
+}
+
+.hair-corner {
+    position: absolute;
+    width: 100%;
+}
+  
+.hair-corner::before,
+.hair-corner::after {
+    content: '';
+    position: absolute;
+    width: 2vw;
+    height: 5vw;
+    transform: rotate(45deg);
+    background-color: hsl(27, 33%, 28%);
+    top: 22.5vw;
+    left: 1.5vw;
+}
+  
+.hair-corner::after {
+    left: initial;
+    right: 1.5vw;
+    transform: rotate(-45deg);
 }
 
 .info {
     font-size: 1rem;
-    margin: 2.5% 0%;
 }
 
 #screen2 {
@@ -73,7 +285,7 @@ html, body {
     background-color: var(--google-red);
     color: white;
     font-size: 1.5rem;
-    padding: 20px;
+    padding: 2.5vh;
     margin: 0% 0% 5% 0%;
 }
 
@@ -125,11 +337,17 @@ html, body {
     margin: 0 0 10% 0;
 }
 
+.cube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .swiper-container {
     margin: 20% 0px;
-    width: 80vw;
-    height: 380px;
-  }
+    width: 60vw;
+    height: 60vw;
+}
 
 .swiper-slide {
     background-position: center;
@@ -138,8 +356,8 @@ html, body {
 
 .swiper-container .swiper-slide .imgBx {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 60vw;
+    height: 60vw;
 }
 
 .swiper-container .swiper-slide .imgBx img{
@@ -154,13 +372,14 @@ html, body {
 .swiper-container .swiper-slide .cube-content {
     position: absolute;
     bottom: 0;
-    height: 80px;
+    height: 15vw;
     width: 100%;
     background: #ccc;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 }
 
 .swiper-container .swiper-slide .cube-content h2 {
@@ -169,7 +388,7 @@ html, body {
 
 .swiper-container .swiper-slide .cube-content span{
     color: #176bef;
-    font-size: 1rem;
+    font-size: .75rem;
     padding: 0px 10px;
 }
 
@@ -193,7 +412,7 @@ html, body {
 .wrapper {
     margin: 25% 0;
 }
-/* form animation starts */
+
 .form {
     background-color: #ccc;
     border-radius: 5px;
@@ -303,24 +522,35 @@ html, body {
     .nav a {
         color: white;
         text-decoration: none;
-        padding: 5%;
-        font-size: 1.25rem;
-    }
+        font-size: 1.5rem;
+    } 
+
+    .hello {
+        margin: 0 auto;
+        font-size: 12.5rem;
+    } 
 
     .profile-pic {
         width: 70%;
         height: auto;
-        margin: 5% 0%;
-    }
-
-    .hello {
-        font-size: 10rem;
+        margin: 0vh 0vw 5vh 0vw;
     }
 
     .info {
+        margin: 0 auto;
+        padding: 0vh 10vw 10vh 10vw;
         font-size: 1rem;
-        margin: 10% 15%;
     }
+
+    .title {
+    display: flex;
+    justify-content: center;
+    background-color: var(--google-red);
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin: 0% 0% 5% 0%;
+}
 }
 
 
