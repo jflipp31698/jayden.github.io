@@ -45,11 +45,12 @@ html, body {
 
 .hello {
     font-size: 7.5rem;
+    margin: 0 auto;
 }
 
 .head-container {
     z-index: -2;
-    margin: 15vw auto;
+    margin: 15% auto;
     width: 70vw;
     height: 70vw;
     display: flex;
@@ -121,7 +122,7 @@ html, body {
     border: 0.75vw solid hsl(19, 46%, 68%);
     border-radius: 0% 0% 100% 100%;
     border-top: none;
-    margin-top: 20vw;
+    margin-top: 20%;
 }
 
 .brow {
@@ -129,7 +130,7 @@ html, body {
     height: 6vw;
     border-top: 1.5vw solid hsl(27, 33%, 28%);
     border-radius: 100%;
-    margin-bottom: 7.5vw;
+    margin-bottom: 15%;
 }
 
 .mouth {
@@ -138,7 +139,7 @@ html, body {
     height: 5vw;
     background-color: white;
     border-radius: 30% 30% 100% 100%;
-    margin-top: 45vw;
+    margin-top: 45%;
     border-bottom: 1vw solid hsl(19, 46%, 58%);
     border-top: .75vw solid hsl(19, 46%, 58%);
     animation: mouth-movement 2s infinite;
@@ -177,7 +178,7 @@ html, body {
     width: 60vw;
     height: 25vw;
     background-color: hsl(27, 33%, 28%);
-    margin-bottom: 60vw;
+    margin-bottom: 60%;
     border-radius: 80% 20% 0 0;
 }
 
@@ -194,7 +195,7 @@ html, body {
 
 .hair::before {
     left: 0;
-  }
+}
 
 .hair::after {
   right: 0;
@@ -238,13 +239,13 @@ html, body {
 
 @keyframes brow-movement {
     0% {
-        margin-bottom: 0vw;
+        margin-bottom: 0%;
     }
     50% {
-        margin-bottom: 2vw;
+        margin-bottom: 2%;
     }
     100% {
-        margin-bottom: 0vw;
+        margin-bottom: 0%;
     }
 }
 
