@@ -24,6 +24,7 @@ html, body {
     min-height: 100vh;
     background-color: var(--google-blue);
     color: white;
+    margin: 0 auto;
 }
 
 .nav {
@@ -43,12 +44,11 @@ html, body {
 }
 
 .hello {
-    margin: 0% 0% 7.5% 0%;
     font-size: 7.5rem;
 }
 
 .head-container {
-    z-index: 2;
+    z-index: -2;
     margin: 15vw auto;
     width: 70vw;
     height: 70vw;
@@ -61,7 +61,7 @@ html, body {
     width: 60vw;
     height: 75vw;
     background-color: hsl(36, 81%, 72%);
-    border-radius: 70% 70% 100% 100%;
+    border-radius: 70% 70% 80% 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,41 +93,6 @@ html, body {
     position: relative;
 }
 
-@keyframes brow-movement {
-    0% {
-        margin-bottom: 0vw;
-    }
-    50% {
-        margin-bottom: 1vw;
-    }
-    100% {
-        margin-bottom: 0vw;
-    }
-}
-
-@keyframes eye-movement {
-    0% {
-        margin: 0 0 1vw 2vw;
-    }
-    50% {
-        margin: 0 0 .5vw 1vw;
-    }
-    100% {
-        margin: 0 0 1vw 2vw;
-    }
-}
-
-@keyframes pupil-movement {
-    0% {
-        margin: 0 0 2.5vw 3vw;
-    }
-    50% {
-        margin: 0 0 1.25vw 1.5vw;
-    }
-    100% {
-        margin: 0 0 2.5vw 3vw;
-    }
-}
 
 .eye::before {
     content: '';
@@ -172,30 +137,14 @@ html, body {
     width: 20vw;
     height: 5vw;
     background-color: white;
-    border-radius: 30% 30% 80% 100%;
+    border-radius: 30% 30% 100% 100%;
     margin-top: 45vw;
     border-bottom: 1vw solid hsl(19, 46%, 58%);
     border-top: .75vw solid hsl(19, 46%, 58%);
     animation: mouth-movement 2s infinite;
 }
 
-@keyframes mouth-movement {
-    0% {
-        border-radius: 0% 0% 100% 100%;
-        height: 5vw;
-    }
-    50% {
-        border-radius: 30% 30% 100% 100%;
-        height: 6vw;
-    }
-    100% {
-        border-radius: 0% 0% 100% 100%;
-        height: 5vw;
-    }
-}
-
 .ears {
-    z-index: 1;
     position: absolute;
     width: 67.5vw;
     display: flex;
@@ -207,16 +156,19 @@ html, body {
     width: 5vw;
     height: 15vw;
     background: hsl(36, 81%, 72%);
-    border-radius: 0 100% 100% 0;
+    border-radius: 0 160% 160% 0;
 }
 
 .ear:first-child {
-    border-radius: 100% 0 0 100%;
+    border-radius: 160% 0 0 160%;
     border-left: .5vw solid  hsl(19, 46%, 68%);
+    transform: rotate(-5deg);
+
 }
 
 .ear:last-child {
     border-right: .5vw solid  hsl(19, 46%, 68%);
+    transform: rotate(5deg);
 }
 
 .hair {
@@ -271,12 +223,64 @@ html, body {
     transform: rotate(-45deg);
 }
 
+@keyframes mouth-movement {
+    0% {
+        border-radius: 0% 0% 100% 100%;
+        height: 5vw;
+    }
+    50% {
+        border-radius: 30% 30% 100% 100%;
+        height: 6vw;
+    }
+    100% {
+        border-radius: 0% 0% 100% 100%;
+        height: 5vw;
+    }
+}
+
+@keyframes brow-movement {
+    0% {
+        margin-bottom: 0vw;
+    }
+    50% {
+        margin-bottom: 2vw;
+    }
+    100% {
+        margin-bottom: 0vw;
+    }
+}
+
+@keyframes eye-movement {
+    0% {
+        margin: 0 0 1vw 2vw;
+    }
+    50% {
+        margin: 0 0 .5vw 1vw;
+    }
+    100% {
+        margin: 0 0 1vw 2vw;
+    }
+}
+
+@keyframes pupil-movement {
+    0% {
+        margin: 0 0 2.5vw 3vw;
+    }
+    50% {
+        margin: 0 0 1.25vw 1.5vw;
+    }
+    100% {
+        margin: 0 0 2.5vw 3vw;
+    }
+}
+
 .info {
     font-size: 1rem;
 }
 
 #screen2 {
     min-height: 100vh;
+    margin: 0 auto;
 }
 
 .title {
@@ -325,6 +329,7 @@ html, body {
 
 #screen3 {
     min-height: 100vh;
+    margin: 0 auto;
 }
 
 .title2 {
@@ -394,6 +399,7 @@ html, body {
 
 #screen4 {
     min-height: 100vh;
+    margin: 0 auto;
 }
 
 .title3 {
@@ -497,8 +503,7 @@ html, body {
     color: black;
     font-size: .75rem;
     text-decoration: none;
-    margin: 0px 0px 7.5% 0px;
-    margin-top: 80vh;
+    margin-top: 85vh;
 }
 
 .backToTop:hover {
