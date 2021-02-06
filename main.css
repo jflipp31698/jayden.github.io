@@ -1,0 +1,527 @@
+:root {
+    font-family: Poppins, 'Georgia','Times New Roman', Times, serif;
+    --text-primary: black;
+    --text-secondary: #e1eb34;
+    --bg-primary: white;
+    --bg-secondary: #4C8BF5;
+    --google-red: #ff3e30;
+    --google-green: #1aa260;
+    --google-blue: #176bef;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  
+  html, body{
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .container{
+    display: grid;
+    height: 100vh;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 5fr 1fr 5fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "face face face"
+    "about about about"
+    "school-info coding personal-info"
+    "projects projects projects"
+    "cube cube cube"
+    "contact contact contact"
+    "contact-form contact-form contact-form";
+  }
+  
+  nav{
+    background-color: var(--google-blue);
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  nav a {
+    padding: 1% 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+  }
+  
+  nav a:hover {
+    color: #e1eb34;
+  }
+  
+  #face{
+    background-color: var(--google-blue);
+    grid-area: face;
+  }
+  
+  #hello {
+    color: white;
+    font-size: 10rem;
+  }
+  
+  .head-container {
+      z-index: -2;
+      width: 100vw;
+      margin: 5% auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .head {
+      width: 30vw;
+      height: 40vw;
+      background-color: hsl(36, 81%, 72%);
+      border-radius: 70% 70% 80% 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0.25vw solid  hsl(19, 46%, 68%);
+  }
+  
+  .eyes, .brows {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 18vw;
+  }
+  
+  .brows {
+      animation: brow-movement 2s infinite;
+  }
+  
+  .eye {
+      background-color: white;
+      width: 6vw;
+      height: 3.75vw;
+      border-radius: 100%;
+      border-top: 0.5vw solid hsl(19, 46%, 68%);
+      border-bottom: 0.5vw solid hsl(19, 46%, 68%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+  }
+  
+  
+  .eye::before {
+      content: '';
+      position: absolute;
+      width: 3.75vw;
+      height: 3.75vw;
+      background-color: #85ABCE;
+      border-radius: 100%;
+      animation: eye-movement 2s infinite;
+  }
+  
+  .eye::after {
+      content: '';
+      position: absolute;
+      width: 1vw;
+      height: 1vw;
+      background-color: black;
+      border-radius: 100%;
+      animation: pupil-movement 2s infinite;
+  }
+  
+  .nose {
+      position: absolute;
+      width: 3.5vw;
+      height: 3.5vw;
+      border: 0.375vw solid hsl(19, 46%, 68%);
+      border-radius: 0% 0% 100% 100%;
+      border-top: none;
+      margin-top: 10%;
+  }
+  
+  .brow {
+      width: 6vw;
+      height: 3vw;
+      border-top: .75vw solid hsl(27, 33%, 28%);
+      border-radius: 100%;
+      margin-bottom: 15%;
+  }
+  
+  .mouth {
+      position: absolute;
+      width: 10vw;
+      height: 2.5vw;
+      background-color: white;
+      border-radius: 30% 30% 100% 100%;
+      margin-top: 25%;
+      border-bottom: .5vw solid hsl(19, 46%, 58%);
+      border-top: .375vw solid hsl(19, 46%, 58%);
+      animation: mouth-movement 2s infinite;
+  }
+  
+  .ears {
+      position: absolute;
+      width: 33.75vw;
+      display: flex;
+      justify-content: space-between;
+      z-index: 3;
+  }
+  
+  .ear {
+      width: 2.5vw;
+      height: 7.5vw;
+      background: hsl(36, 81%, 72%);
+      border-radius: 0 160% 160% 0;
+  }
+  
+  .ear:first-child {
+      border-radius: 160% 0 0 160%;
+      border-left: .25vw solid  hsl(19, 46%, 68%);
+      transform: rotate(-5deg);
+  
+  }
+  
+  .ear:last-child {
+      border-right: .25vw solid  hsl(19, 46%, 68%);
+      transform: rotate(5deg);
+  }
+  
+  .hair {
+      z-index: 5;
+      position: absolute;
+      width: 30vw;
+      height: 12.5vw;
+      background-color: hsl(27, 33%, 28%);
+      margin-bottom: 32vw;
+      border-radius: 80% 20% 0 0;
+  }
+  
+  .hair::before,
+  .hair::after {
+    content: '';
+    position: absolute;
+    background-color: hsl(27, 33%, 28%);
+    height: 11.75vw;
+    width: 1vw;
+    border-radius: 0 0 25% 25%;
+    transform: translateY(100%);
+  }
+  
+  .hair::before {
+      left: 0;
+  }
+  
+  .hair::after {
+    right: 0;
+  }
+  
+  .hair-corner {
+      position: absolute;
+      width: 100%;
+  }
+    
+  .hair-corner::before,
+  .hair-corner::after {
+      content: '';
+      position: absolute;
+      width: 1vw;
+      height: 2.5vw;
+      transform: rotate(45deg);
+      background-color: hsl(27, 33%, 28%);
+      top: 11.25vw;
+      left: .75vw;
+  }
+    
+  .hair-corner::after {
+      left: initial;
+      right: .75vw;
+      transform: rotate(-45deg);
+  }
+  
+  @keyframes mouth-movement {
+      0% {
+          height: 2.5vw;
+      }
+      50% {
+          height: 3vw;
+      }
+      100% {
+  
+          height: 2.5vw;
+      }
+  }
+  
+  @keyframes brow-movement {
+      0% {
+          margin-bottom: 0%;
+      }
+      50% {
+          margin-bottom: 1%;
+      }
+      100% {
+          margin-bottom: 0%;
+      }
+  }
+  
+  @keyframes eye-movement {
+      0% {
+          margin: 0 0 .5vw 1vw;
+      }
+      50% {
+          margin: 0 0 .25vw .5vw;
+      }
+      100% {
+          margin: 0 0 .5vw 1vw;
+      }
+  }
+  
+  @keyframes pupil-movement {
+      0% {
+          margin: 0 0 1.25vw 1.5vw;
+      }
+      50% {
+          margin: 0 0 .675vw .75vw;
+      }
+      100% {
+          margin: 0 0 1.25vw 1.5vw;
+      }
+  }
+  
+  #name {
+    color: white;
+    font-size: 1.25rem;
+    margin: 2.5% 20%;
+  }
+  
+  #about{
+    grid-area: about;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+  
+  #title {
+    color: white;
+    width: 100%;
+    background-color: var(--google-red);
+    font-size: 1.5rem;
+    padding: 2.5vh;
+  }
+  
+  #school-info{
+    grid-area: school-info;
+  }
+  
+  #info{
+    font-size: 1rem;
+    margin: 10%;
+    line-height: 35px;
+  }
+  
+  #coding{
+    grid-area: coding;
+  }
+  
+  #code{
+    width: 80%;
+    height: auto;
+    margin: 10%;
+    border-radius: 10px;
+  }
+  
+  #world {
+    width: 80%;
+    height: auto;
+    margin: 10%;
+    border-radius: 15px;
+  }
+  
+  
+  #personal-info{
+    grid-area: personal-info;
+  }
+  
+  #projects{
+    grid-area: projects;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #project-title{
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: var(--google-green);
+    padding: 2.5vh;
+  }
+  
+  #cube{
+    grid-area: cube;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+  }
+  
+  .swiper-container {
+    width: 30vw;
+    height: 30vw;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .swiper-container .swiper-slide .imgBx{
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+  }
+  
+  .swiper-container .swiper-slide .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper-container .swiper-slide .content{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background: rgba(244, 180, 0, 1);
+    text-align: center;
+  }
+  
+  #contact{
+    grid-area: contact;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #contact-title{
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: var(--google-blue);
+    padding: 2.5vh;
+  }
+  
+  #contact-form{
+    grid-area: contact-form;
+    height: 90vh;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0;
+  }
+  
+  .form {
+    margin: 2.5% 0;
+    background-color: #ccc;
+    border-radius: 5px;
+    width: 25vw;
+    height: auto;
+    animation: bounce 2.5s infinite;
+  }
+
+  @keyframes bounce{
+    0%{
+      margin: 0% auto;
+    }
+    50%{
+      margin: 1% auto;
+    }
+    100%{
+      margin: 0% auto;
+    }
+  }
+  ::-webkit-input-placeholder {
+    font-size: 1.3em;
+  }
+  
+  .name {
+    background-color: #ebebeb;
+  }
+  .name:hover {
+    width: 20vw;
+    transition: ease 0.5s;
+  }
+  
+  .email {
+    background-color: #ebebeb;
+  }
+  
+  .email:hover {
+    width: 20vw;
+    transition: ease 0.5s;
+  }
+  
+  .message {
+    background-color: #ebebeb;
+    overflow: hidden;
+    height: 10rem;
+  }
+  
+  .message:hover {
+    width: 20vw;
+    transition: ease 0.5s;
+  }
+  
+  .formEntry {
+    display: block;
+    margin: 2.5vw auto;
+    min-width: 250px;
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .submit {
+    width: 100px;
+    color: white;
+    background-color: var(--google-blue);
+    font-size: 20px;
+  }
+  
+  .submit:hover {
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.319);
+    transform: translateY(-5px);
+    width: 200px;
+    border-radius: 0%;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 5fr 1fr 2.5fr 2.5fr 2.5fr 1fr 10fr 1fr 10fr;
+      grid-template-areas:
+        "nav"
+        "face"
+        "about"
+        "school-info"
+        "coding"
+        "personal-info"
+        "projects"
+        "cube"
+        "contact"
+        "contact-form"
+    }
+  }
+
+
+
+
+
