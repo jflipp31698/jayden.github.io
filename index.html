@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="main.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS GRID</title>
+    <title>Jayden Flipp Connolly</title>
 </head>
 <body>
     <div class="container">
-        <nav>
+        <nav id="nav">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -48,11 +49,13 @@
             </p>
         </div>
         <div id="coding">
+            <img id="uwec" src="images/uwec.jpg" alt="University of Wisconsin-Eau Claire">
             <img id="world" src="images/world-0-1.jpg" alt="The globe written in zeros and ones">
         </div>
         <div id="personal-info">
             <p id="info">A large proportion of the world uses the Internet everyday, this is why web development is my favorite subject within Computer Science. I love creating webpages that make others lives easier, less stressful and more efficient. I even make silly websites with fun animations for fun when I have an hour or more of free time.</p>
-            <p id="info">Beyond programming, I really enjoy nature and playing basketball with my friends, going out for dinner and playing video games. While I dont get much free time with school and work, I make time for these things to create a good balance in my life.</p>
+            <p id="hobbies">Beyond programming, I really enjoy nature and playing basketball with my friends, going out for dinner and playing video games. While I dont get much free time with school and work, I make time for these things to create a good balance in my life.</p>
+            <img id="world-mobile" src="images/world-0-1.jpg" alt="World of zeros and ones">
         </div>
         <div id="projects">
             <h3 id="project-title">Personal Projects</h3>
@@ -84,14 +87,6 @@
                         <h2>Mountain</h2>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="imgBx">
-                        <img src="images/forest.jpg" alt="Forest">
-                    </div>
-                    <div class="content">
-                        <h2>Forest</h2>
-                    </div>
-                </div>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
@@ -109,10 +104,11 @@
                   <button class="submit formEntry onclick="submitForm()">Submit</button>
                 </form>
             </div>
+            <a id="backToTop" onclick="scrollToTop()">Back To Top</a>
         </div>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <script src="app.js"></script>
     <script>
     var swiper = new Swiper('.swiper-container', {
       effect: 'cube',
@@ -120,7 +116,7 @@
       cubeEffect: {
         shadow: true,
         slideShadows: true,
-        shadowOffset: 50,
+        shadowOffset: 30,
         shadowScale: 1,
       },
       pagination: {

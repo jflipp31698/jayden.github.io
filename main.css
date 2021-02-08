@@ -20,18 +20,21 @@
     margin: 0px;
     padding: 0px;
   }
+
+  /*Desktop*/
   
   .container{
     display: grid;
     height: 100vh;
     text-align: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 5fr 1fr 5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 5fr 1fr 5fr;
     grid-template-areas: 
     "nav nav nav"
     "face face face"
     "about about about"
     "school-info coding personal-info"
+    "school-info world personal-info"
     "projects projects projects"
     "cube cube cube"
     "contact contact contact"
@@ -50,7 +53,7 @@
     padding: 1% 0;
     color: white;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
   
   nav a:hover {
@@ -64,7 +67,7 @@
   
   #hello {
     color: white;
-    font-size: 10rem;
+    font-size: 15rem;
   }
   
   .head-container {
@@ -301,7 +304,7 @@
     grid-area: about;
     display: flex;
     justify-content: center;
-    padding-bottom: 5%;
+    margin-bottom: 5%;
   }
   
   #title {
@@ -314,38 +317,46 @@
   
   #school-info{
     grid-area: school-info;
+    margin: 0 5%;
   }
   
   #info{
+    margin-top: 20%;
     font-size: 1rem;
-    margin: 10%;
+    line-height: 35px;
+  }
+
+  #hobbies{
+    margin-top: 5%;
+    font-size: 1rem;
     line-height: 35px;
   }
   
   #coding{
     grid-area: coding;
+    margin: 0 10%;
   }
   
-  #code{
-    width: 80%;
-    height: auto;
-    margin: 10%;
+  #uwec{
     border-radius: 10px;
+    margin-bottom: 25%;
   }
   
   #world {
-    width: 80%;
-    height: auto;
-    margin: 10%;
-    border-radius: 15px;
+    border-radius: 10px;
   }
-  
   
   #personal-info{
     grid-area: personal-info;
+    margin: 0 5%;
+  }
+
+  #world-mobile{
+    display: none;
   }
   
   #projects{
+    margin-top: 5%;
     grid-area: projects;
     display: flex;
     justify-content: center;
@@ -395,8 +406,9 @@
   .swiper-container .swiper-slide .content{
     position: absolute;
     bottom: 0;
-    height: 80px;
+    height: 5vw;
     width: 100%;
+    padding-top: 1vw;
     background: rgba(244, 180, 0, 1);
     text-align: center;
   }
@@ -428,25 +440,11 @@
   }
   
   .form {
-    margin: 2.5% 0;
     background-color: #ccc;
     border-radius: 5px;
-    width: 25vw;
-    height: auto;
-    animation: bounce 2.5s infinite;
+    width: 40vw;
   }
 
-  @keyframes bounce{
-    0%{
-      margin: 0% auto;
-    }
-    50%{
-      margin: 1% auto;
-    }
-    100%{
-      margin: 0% auto;
-    }
-  }
   ::-webkit-input-placeholder {
     font-size: 1.3em;
   }
@@ -454,18 +452,9 @@
   .name {
     background-color: #ebebeb;
   }
-  .name:hover {
-    width: 20vw;
-    transition: ease 0.5s;
-  }
   
   .email {
     background-color: #ebebeb;
-  }
-  
-  .email:hover {
-    width: 20vw;
-    transition: ease 0.5s;
   }
   
   .message {
@@ -473,16 +462,12 @@
     overflow: hidden;
     height: 10rem;
   }
-  
-  .message:hover {
-    width: 20vw;
-    transition: ease 0.5s;
-  }
+
   
   .formEntry {
     display: block;
-    margin: 2.5vw auto;
-    min-width: 250px;
+    margin: 5vw auto;
+    width: 25vw;
     padding: 10px;
     border-radius: 2px;
     border: none;
@@ -490,7 +475,7 @@
   }
   
   .submit {
-    width: 100px;
+    width: 25vw;
     color: white;
     background-color: var(--google-blue);
     font-size: 20px;
@@ -499,14 +484,79 @@
   .submit:hover {
     box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.319);
     transform: translateY(-5px);
-    width: 200px;
+    width: 30vw;
     border-radius: 0%;
   }
-  
-  @media only screen and (max-width: 768px) {
+
+  #backToTop{
+    color: var(--google-blue);
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-bottom: 5vw;
+  }
+
+  #backToTop:hover{
+    color: var(--google-red);
+  }
+
+  @media only screen and (max-width: 1645px) {
+    #info{
+      margin-top: 7.5%;
+    }
+    nav a{
+      font-size: 1.5rem;
+    }
+    .swiper-container {
+      width: 40vw;
+      height: 40vw;
+    }
+    
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+    
+    .swiper-container .swiper-slide .imgBx{
+      position: absolute;
+      width: 40vw;
+      height: 40vw;
+    }
+    
+    .swiper-container .swiper-slide .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .swiper-container .swiper-slide .content{
+      height: 7.5vw;
+    }
+  }
+
+  @media only screen and (max-width: 1376px) {
+    #hello{
+      font-size: 12rem;
+    }
+    #uwec{
+      margin-bottom: 15%;
+    }
+    #info{
+      font-size: .8rem;
+      margin-top: 7.5%;
+    }
+    #hobbies{
+      margin-top: 2.5%;
+      font-size: .8rem;
+    }
+  }
+
+  @media only screen and (max-width: 1224px) {
     .container {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 5fr 1fr 2.5fr 2.5fr 2.5fr 1fr 10fr 1fr 10fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-areas:
         "nav"
         "face"
@@ -518,6 +568,151 @@
         "cube"
         "contact"
         "contact-form"
+    }
+    #coding{
+      width: 60vw;
+      margin: 0 auto;
+    }
+    #uwec{
+      margin: 0;
+    }
+    #world{
+      display: none;
+    }
+    #world-mobile{
+      display: inline;
+      width: 60vw;
+      margin-top: 5%;
+      border-radius: 10px;
+    }
+    #school-info{
+      margin: 0% 10% 7.5% 10%;
+    }
+    #info{
+      font-size: 1.25rem;
+      margin: 0 10%;
+    }
+    #personal-info{
+      margin: 5% 10% 7.5% 10%;
+    }
+    #hobbies{
+      font-size: 1.25rem;
+      margin: 5% 10% 0% 10%;
+    }
+    .form{
+      margin-top: 7.5%;
+    }
+  }
+
+  @media only screen and (max-width:1024px){
+    #hello{
+      font-size: 10rem;
+    }
+    .swiper-container {
+      width: 50vw;
+      height: 50vw;
+    }
+    .swiper-container .swiper-slide .imgBx{
+      position: absolute;
+      width: 50vw;
+      height: 50vw;
+    }
+    .swiper-pagination{
+      margin-top: 7.5%;
+    }
+  }
+
+  @media only screen and (max-width:900px){
+    .swiper-container .swiper-slide .content{
+      font-size: 0.8rem;
+    }
+  }
+
+  @media only screen and (max-width:768px){
+    nav a{
+      font-size: 1.25rem;
+    }
+    #hello{
+      font-size: 7.5rem;
+    }
+    #name{
+      font-size: 1rem;
+    }
+    #school-info{
+      margin: 0% 0% 7.5% 0%;
+    }
+    #info{
+      font-size: 1rem;
+      margin: 0 10%;
+    }
+    #personal-info{
+      margin: 5% 0% 7.5% 0%;
+    }
+    #hobbies{
+      font-size: 1rem;
+      margin: 5% 10% 0% 10%;
+    }
+    #coding{
+      width: 75vw;
+      height: auto;
+    }
+    #world-mobile{
+      width: 75vw;
+      height: auto;
+    }
+    .swiper-container {
+      width: 60vw;
+      height: 60vw;
+    }
+    .swiper-container .swiper-slide .imgBx{
+      position: absolute;
+      width: 60vw;
+      height: 60vw;
+    }
+    .swiper-container .swiper-slide .content{
+      height: 10vw;
+    }
+    .form{
+      width: 50vw;
+      margin-top: 15%;
+    }
+    .formEntry{
+      width: 30vw;
+    }
+  }
+
+  @media only screen and (max-width:460px){
+    nav a{
+      font-size: 1rem;
+    }
+    #hello{
+      font-size: 5rem;
+    }
+    #name{
+      font-size: 1rem;
+    }
+    #cube{
+      margin: 20% 0;
+    }
+    .swiper-container {
+      width: 70vw;
+      height: 70vw;
+    }
+    .swiper-container .swiper-slide .imgBx{
+      position: absolute;
+      width: 70vw;
+      height: 70vw;
+    }
+    .swiper-container .swiper-slide .content{
+      height: 12vw;
+      font-size: .75rem;
+    }
+    .form{
+      width: 70vw;
+      margin-top: 15%;
+    }
+    .formEntry{
+      width: 50vw;
     }
   }
 

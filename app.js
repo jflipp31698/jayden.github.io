@@ -8,3 +8,8 @@ function submitForm() {
     frm.reset();  // Reset all form data
     return false; // Prevent page refresh
  }
+
+ // Scroll To Top
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
