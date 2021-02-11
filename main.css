@@ -197,8 +197,8 @@
   
   .mouth {
       position: absolute;
-      width: 10vw;
-      height: 2.5vw;
+      width: 10%;
+      height: 2.5%;
       background-color: white;
       border-radius: 30% 30% 100% 100%;
       margin-top: 25%;
@@ -235,12 +235,11 @@
   }
   
   .hair {
-      z-index: 5;
       position: absolute;
       width: 30vw;
       height: 12.5vw;
       background-color: hsl(27, 33%, 28%);
-      margin-bottom: 32vw;
+      margin-bottom: 32%;
       border-radius: 80% 20% 0 0;
   }
   
