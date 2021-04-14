@@ -1,131 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="main.css">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Jayden Flipp Connolly</title>
 </head>
 <body>
-    <div class="container">
-        <nav id="nav">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div id="hello">
-            <h1 data-text="Hello.">Hello.</h1>
+    <main>
+        <h1 id="name">Jayden Flipp Connolly</h1>
+        <div id="line"></div>
+        <h3 id="title">Frontend Developer & Computer Enthusiast</h3>
+        <div class="btnContainer">
+            <button onclick="location.href='./projects.html'" type="button">Projects</button>
+            <button onclick="location.href='./contact.html'" type="button">Contact</button>
         </div>
-        <div id="face">
-            <div class="head-container">
-                <div class="head">
-                    <div class="hair">
-                        <div class="hair-corner"></div>
-                    </div>
-                    <div class="brows">
-                        <div class="brow"></div>
-                        <div class="brow"></div>
-                    </div>
-                    <div class="eyes">
-                        <div class="eye"></div>
-                        <div class="eye"></div>
-                    </div>
-                    <div class="nose"></div>
-                    <div class="mouth"></div>
-                    <div class="ears">
-                        <div class="ear"></div>
-                        <div class="ear"></div>
-                    </div>
-                </div>
-            </div>
-            <p id="name">My name is <span>Jayden Flipp Connolly</span>, I'm a Web Developer from the Midwest and this is a collection of my information and personal work.</p>
-        </div>
-        <div id="about">
-            <h3 class="title" id="about-title">About Me</h3>
-        </div>
-        <div id="school-info">
-            <p id="info">Currently, I am pursuing a degree in Computer Science at the University of Wisconsin-Eau Claire with an expected graduation in May 2021. I chose to study Computer Science because of my love for technology and video games from a young age. During my time at UWEC, I have learned so much more than I thought I would. I advanced my knowledge of computer programming from almost no knowledge to a skilled developer in a short 4 years, learned quite a bit about computer hardware and even made some friends on the journey.
-            </p>
-        </div>
-        <div id="coding">
-            <img id="uwec" src="images/uwec.jpg" alt="University of Wisconsin-Eau Claire">
-            <img id="world" src="images/world-0-1.jpg" alt="The globe written in zeros and ones">
-        </div>
-        <div id="personal-info">
-            <p id="info">A large proportion of the world uses the Internet everyday, this is why web development is my favorite subject within Computer Science. I love creating webpages that make others lives easier, less stressful and more efficient. With my free time I like to design and launch webpages with cool animations.</p>
-            <p id="hobbies">Beyond programming, I really enjoy hiking, playing basketball with my friends, going out for dinner and playing video games. While I dont get much free time with school and work, I make time for these things to create a good balance in my life.</p>
-            <img id="world-mobile" src="images/world-0-1.jpg" alt="World of zeros and ones">
-        </div>
-        <div id="projects">
-            <h3 class="title" id="project-title">Personal Projects</h3>
-        </div>
-        <div id="cube">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                      <div class="imgBx">
-                          <img src="images/abstract-snow.jpg" alt="Snow">
-                      </div>
-                      <div class="content">
-                          <h2>Snow</h2>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="imgBx">
-                        <img src="images/road.jpg" alt="Road">
-                    </div>
-                    <div class="content">
-                        <h2>Road</h2>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx">
-                        <img src="images/mountain.jpg" alt="Mountain">
-                    </div>
-                    <div class="content">
-                        <h2>Mountain</h2>
-                    </div>
-                </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-              </div>
-        </div>
-        <div id="contact">
-            <h3 class="title" id="contact-title">Contact Me</h3>
-        </div>
-        <div id="contact-form">
-            <div class="wrapper">
-                <form class="form">
-                  <input type="text" class="name formEntry" placeholder="Name" />
-                  <input type="text" class="email formEntry" placeholder="Email"/>
-                  <textarea class="message formEntry" placeholder="Message"></textarea>
-                  <button class="submit formEntry onclick="submitForm()">Submit</button>
-                </form>
-            </div>
-            <a id="backToTop" onclick="scrollToTop()">Back To Top</a>
-        </div>
-    </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="app.js"></script>
-    <script>
-    var swiper = new Swiper('.swiper-container', {
-      effect: 'cube',
-      grabCursor: true,
-      cubeEffect: {
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 35,
-        shadowScale: 1,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-    </script>
-
+    </main>
 </body>
 </html>
