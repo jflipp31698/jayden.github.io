@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+    background-color: #1d3254;
+    color: white;
+}
+
+.carousel-item{
+    width: 100%;
+}
