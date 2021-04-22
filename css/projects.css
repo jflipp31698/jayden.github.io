@@ -1,9 +1,25 @@
 body {
     text-align: center;
     background-color: #1d3254;
+    color: black;
+}
+
+h1{
     color: white;
 }
 
-.carousel-item{
+.carousel{
+    height: 80vh;
     width: 100%;
+}
+
+.carousel .carousel-item{
+    width: 30%;
+    height: auto;
+    background-color: white;
+}
+
+.project-desc{
+    font-size: 2rem;
+    padding: 10px 20px;
 }
