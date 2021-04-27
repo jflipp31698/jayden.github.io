@@ -8,18 +8,56 @@ h1{
     color: white;
 }
 
+#back{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
 .carousel{
     height: 80vh;
     width: 100%;
 }
 
 .carousel .carousel-item{
-    width: 30%;
+    width: 70%;
     height: auto;
     background-color: white;
+    border-radius: 20px;
+}
+
+.carousel .carousel-item:hover{
+    cursor:grab;
+}
+
+.carousel .carousel-item:active{
+    cursor:grabbing;
+}
+
+.project-title{
+    color: goldenrod;
 }
 
 .project-desc{
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 10px 20px;
+}
+
+
+@media only screen and (min-width: 1200px){
+    .carousel .carousel-item{
+        width: 50%; 
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .carousel .carousel-item{
+        width: 40%; 
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    .carousel .carousel-item{
+        width: 30%; 
+    }
 }
