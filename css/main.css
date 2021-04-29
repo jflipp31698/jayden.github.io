@@ -1,36 +1,7 @@
-:root {
-  font-size: 16px;
-  font-family: Poppins, sans-serif;
-  --text-primary: black;
-  --text-secondary: #e1eb34;
-  --bg-primary: white;
-  --bg-secondary: #4C8BF5;
-  --google-red: #ff3e30;
-  --google-green: #1aa260;
-  --google-blue: #176bef;
-}
-
 *,*::before,*::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-@font-face{
-  font-family: PopLight;
-  src: url(./fonts/Poppins-Light.ttf);
-}
-@font-face{
-  font-family: PopMed;
-  src: url(./fonts/Poppins-Medium.ttf);
-}
-@font-face{
-  font-family: PopRegular;
-  src: url(./fonts/Poppins-Regular.ttf);
-}
-
-body{
-  font-family: PopLight;
 }
 
 body{
@@ -77,7 +48,7 @@ button{
   background-color: #1d3254;
   border: 2px solid goldenrod;
   color: white;
-  font-size: 0.75rem;
+  font-size: 1rem;
   margin: 20px 20px;
 }
 
@@ -123,5 +94,14 @@ button:hover{
 @media only screen and (min-width: 1280px){
   #line{
       width: 15%;
+  }
+  #name{
+    font-size: 5rem;
+  }
+  #title{
+    font-size: 2rem;
+  }
+  button{
+    font-size: 1.25rem;
   }
 }
