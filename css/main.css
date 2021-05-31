@@ -30,8 +30,12 @@ main{
   margin: 2% 0;
 }
 
+#typed{
+  font-size: 1.75rem;
+}
+
 #title{
-  font-size: 0.75rem;
+  font-size: 1.75rem;
   margin: 2% 0;
 }
 
