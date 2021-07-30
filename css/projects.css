@@ -1,12 +1,65 @@
 body {
     text-align: center;
     background-color: #1d3254;
-    color: black;
 }
 
-h1{
-    color: white;
+h3{
+    color: rgb(15,157,88);
 }
+
+p{
+    color: white;
+    font-size: 20px;
+}
+
+
+button{
+    background-color: rgb(15,157,88);
+    width: 500px;
+    height: 100px;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 30px 0;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+button:hover span {
+    padding-right: 25px;
+}
+  
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+button:visited{
+    border: none;
+}
+
+button:active{
+    background-color: rgb(15,157,88);
+}
+
+
 
 #back{
     position: absolute;
@@ -14,50 +67,26 @@ h1{
     left: 25px;
 }
 
-.carousel{
-    height: 80vh;
-    width: 100%;
+#title1{
+    color: white;
+    margin-top: 50px;
 }
 
-.carousel .carousel-item{
-    width: 70%;
-    height: auto;
-    background-color: #858585;
-    border-radius: 20px;
+#title2{
+    color: white;
 }
 
-.carousel .carousel-item:hover{
-    cursor:grab;
-}
-
-.carousel .carousel-item:active{
-    cursor:grabbing;
-}
-
-.project-title{
-    color: goldenrod;
-}
-
-.project-desc{
-    font-size: 1.5rem;
-    padding: 10px 20px;
+#btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
-@media only screen and (min-width: 1200px){
-    .carousel .carousel-item{
-        width: 50%; 
-    }
+#project-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
 }
 
-@media only screen and (min-width: 1400px){
-    .carousel .carousel-item{
-        width: 40%; 
-    }
-}
-
-@media only screen and (min-width: 1600px){
-    .carousel .carousel-item{
-        width: 30%; 
-    }
-}

@@ -11,7 +11,7 @@
     <title>Jayden Flipp Connolly</title>
 </head>
 <body>
-    <main>
+    <div id="container">
         <h1 id="name">Jayden Flipp Connolly</h1>
         <div id="line"></div>
         <div id="typed-strings">
@@ -19,24 +19,23 @@
         </div>
         <div class="btnContainer">
             <button onclick="location.href='./projects.html'" type="button">Projects</button>
-            <button onclick="location.href='./contact.html'" type="button">Contact</button>
         </div>
-    </main>
-<script>
-    var typed = new Typed('#typed', {
-        strings: [
-            "Software Developer",
-            "Computer Enthusiast",
-            "Basketball Player",
-            "Golfer",
-            "Vikings Fan"
-        ],
-        loop: true,
-        backSpeed: 30,
-        typeSpeed: 50,
-        startDelay: 2000,
-        smartBackspace: true 
-    });
-</script>
+    </div>
+    <script>
+        var typed = new Typed('#typed', {
+            strings: [
+                "Software Developer",
+                "Computer Enthusiast",
+                "Basketball Player",
+                "Golfer",
+                "Vikings Fan"
+            ],
+            loop: true,
+            backSpeed: 30,
+            typeSpeed: 50,
+            startDelay: 1000,
+            smartBackspace: true 
+        });
+    </script>
 </body>
 </html>

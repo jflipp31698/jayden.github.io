@@ -10,40 +10,41 @@
     <title>Jayden Flipp Connolly | Projects</title>
 </head>
 <body>
-    <main>
-        <h1>Projects</h1>
-        <a id="back" href="index.html"><img src="./img/back_arrow.png" alt="Back Button"></a>
-        <div class="carousel">
-            <div class="carousel-item" id="item-1">
-                <h2 class="project-title">Instagram Viral Bot</h2>
-                <p class="project-desc">Developed a Python application with a GUI to automate a network of Instagram accounts with a comnbined 700k followers.</p>
+        <div class="projects">
+            <a id="back" href="index.html"><img src="./img/back_arrow.png" alt="Back Button"></a>
+            <div id="personal-projects">
+                <h1 id="title1">Personal Projects</h1>
+                <div id="btn-container">
+                    <button onclick="window.location.href='https://jflipp31698.github.io/tip-calculator.github.io/'"><span>Tip Calculator </span></button>
+                    <button onclick="window.location.href='https://jflipp31698.github.io/math-app/'"><span>Kindergartener Addition App </span></button>
+                </div>
             </div>
-            <div class="carousel-item" id="item-2">
-                <h2 class="project-title">Freshman Connect</h2>
-                <p class="project-desc">Created a React app that allowed freshman to connect with their peers and professors in the Science department.</p>
-            </div>
-            <div class="carousel-item" id="item-3">
-                <h2 class="project-title">File Validation</h2>
-                <p class="project-desc">Validated files by comparing their respective codes, generated using the Checksum Algorithm.</p>
-            </div>
-            <div class="carousel-item" id="item-4">
-                <h2 class="project-title">Threading</h2>
-                <p class="project-desc">Utilized Java threads and C pthreads to split the workload of finding the number of primes between given values.</p>
-            </div>
-            <div class="carousel-item" id="item-5">
-                <h2 class="project-title">Data Migration</h2>
-                <p class="project-desc">Migrated data from a MySQL database into a Java GUI using JDBC.</p>
+            <div class="line"></div>
+            <div id="school-projects">
+                <h1 id="title2" >University Projects</h1>
+                <div id="project-container">
+                    <div class="project">
+                        <h3>Instagram Viral Bot</h3>
+                        <p>Developed a Python application with a GUI to automate a network of Instagram accounts with a comnbined 700k followers.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Freshman Connect</h3>
+                        <p>Created a React app that allowed freshman to connect with their peers and professors in the Science department.</p>
+                    </div>
+                    <div class="project">
+                        <h3>File Validation</h3>
+                        <p>Validated files by comparing their respective codes, generated using the Checksum Algorithm.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Threading</h3>
+                        <p>Utilized Java threads and C pthreads to split the workload of finding the number of primes between given values.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Data Migration</h3>
+                        <p>Migrated data from a MySQL database into a Java GUI using JDBC.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.carousel').carousel({
-                indicators: false
-            });
-        });
-    </script>
 </body>
 </html>
