@@ -20,41 +20,38 @@ body{
 }
 
 #name{
-  font-size: 2.5rem;
-}
-
-#line{
-  width: 40%;
-  height: 5px;
-  background-color: rgb(15,157,88);
-  margin: 2% 0;
+  font-size: 3.5rem;
 }
 
 #typed{
-  font-size: 1.55rem;
+  font-size: 1.5rem;
 }
 
 #title{
-  font-size: 1.5rem;
-  margin: 2% 0;
+  font-size: 1.75rem;
+}
+
+.linkedin, .github{
+  width: 50px;
+  height: 50px;
 }
 
 .btnContainer{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 50px;
+  width: 100vw;
+  margin: 50px 0;
 }
 
 button{
   width: 100px;
   height: 50px;
   background-color: #1d3254;
-  border: 3px solid rgb(15,157,88);
+  border: 3px solid white;
   color: white;
-  font-size: 1rem;
-  margin: 20px 20px;
+  font-size: 1.5rem;
+  margin: 25px 20px;
 }
 
 button a{
@@ -70,22 +67,24 @@ button:hover{
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/*768px, 1024px, 1280px and 1980px*/
+/*768px, 1024px*/
 @media only screen and (min-width:768px){
   #name{
-      font-size: 3rem;
+      font-size: 6rem;
   }
   #title{
-      font-size: 1.25rem;
+      font-size: 2.5rem;
   }
-  #line{
-      width: 30%;
+
+  #typed{
+    font-size: 2.5rem;
   }
   .btnContainer{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    margin: 50px 0;
   }
   button{
       width: 100px;
@@ -96,17 +95,27 @@ button:hover{
   }
 }
 
+/*Screen size larger than 1280px*/
 @media only screen and (min-width: 1280px){
-  #line{
-      width: 20%;
-  }
   #name{
-    font-size: 4rem;
+    font-size: 7.5rem;
+  }
+
+  #typed{
+   font-size: 2.5rem;
   }
   #title{
-    font-size: 2rem;
+    font-size: 2.7rem;
   }
   button{
     font-size: 1.25rem;
+  }
+
+  .btnContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    margin: 50px 0;
   }
 }
