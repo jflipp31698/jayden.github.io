@@ -45,27 +45,8 @@ body{
   margin: 50px 0;
 }
 
-button{
-  width: 100px;
-  height: 50px;
-  background-color: #1d3254;
-  border: 3px solid white;
-  color: white;
-  font-size: 1.5rem;
-  margin: 25px 20px;
-}
-
-button a{
-  text-decoration: none;
-  color: white;
-}
-button a:visited{
-  color: white;
-  text-decoration: none;
-}
-
-button:hover{
-  background-color: rgba(255, 255, 255, 0.1);
+figure:hover{
+  cursor: pointer;
 }
 
 /*768px, 1024px*/
@@ -86,13 +67,6 @@ button:hover{
     align-items: center;
     width: 60vw;
   }
-  button{
-      width: 100px;
-      height: 50px;
-      background-color: #1d3254;
-      border: 3px solid rgb(15,157,88);
-      padding: 10px;
-  }
 }
 
 /*Screen size larger than 1280px*/
@@ -105,9 +79,6 @@ button:hover{
   }
   #title{
     font-size: 2.7rem;
-  }
-  button{
-    font-size: 1.25rem;
   }
   .btnContainer{
     display: flex;
