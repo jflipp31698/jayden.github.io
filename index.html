@@ -12,9 +12,9 @@
 </head>
 <body>
     <div id="container">
-        <h1 id="name">Hi, I'm Jayden</h1>
+        <h1 id="name"><span id="typeIntro"></span></h1>
         <div id="typed-strings">
-            <h3 id="title">I'm a <span id="typed"></span></h3>
+            <h3 id="title"><span id="typed"></span></h3>
         </div>
         <div class="btnContainer">
             <figure>
@@ -30,21 +30,34 @@
                 <figcaption>Contact Me</figcaption>
             </figure>
         </div>
+        <div class="resume">
+            <h5>View my <a href="resume.pdf">resume</a></h5>
+        </div>
     </div>
     <script>
         var typed = new Typed('#typed', {
             strings: [
-                "Software Developer",
-                "Computer Enthusiast",
-                "Basketball Player",
-                "Golfer",
-                "Vikings Fan"
+                "I am a Software Developer",
+                "I am a Computer Enthusiast",
+                "I love to play basketball",
+                "I love to golf",
+                "I am a die-hard Vikings Fan"
             ],
             loop: true,
             backSpeed: 30,
             typeSpeed: 50,
-            startDelay: 1000,
+            startDelay: 3200,
             smartBackspace: true 
+        });
+
+        var typedIntro = new Typed('#typeIntro', {
+            strings: [
+                "Hi, my name is Jayden",
+            ],
+            typeSpeed: 50,
+            startDelay: 1000,
+            smartBackspace: true,
+            showCursor: false 
         });
     </script>
 </body>

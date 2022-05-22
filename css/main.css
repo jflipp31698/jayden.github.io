@@ -49,6 +49,19 @@ figure:hover{
   cursor: pointer;
 }
 
+a{
+  text-decoration: underline;
+  color: rgb(151, 151, 151);
+}
+
+a:visited{
+  color: white;
+}
+
+a:hover{
+  color: #5b9aff;
+}
+
 /*768px, 1024px*/
 @media only screen and (min-width:768px){
   #name{
